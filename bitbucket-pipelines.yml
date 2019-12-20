@@ -1,0 +1,11 @@
+# This script was developed for bitbucket pipelines to be called as a custom pipeline, using a pipe (https://bitbucket.org/atlassian/trigger-pipeline/src/master/)
+pipelines:
+  custom:
+    run-notifier:
+    - step:
+        name: Run notifier script
+        image: atlassian/pipelines-awscli
+        script:
+          - apk --update --no-cache add curl
+          - sleep 5m
+          - ./notifier.sh "$ENV_NAME" "$TASK_VERSION" "$VERSION_ID"
