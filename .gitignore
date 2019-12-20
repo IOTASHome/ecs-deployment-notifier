@@ -1,0 +1,13 @@
+*.tfstate*
+*.tfstate.backup*
+.terraform
+.DS_Store
+*.swp
+*.pyc
+.direnv
+.envrc
+.idea
+secret
+root.cert
+testdevice*
+.vscode
